@@ -31,57 +31,42 @@
         /* Navbar */
         .navbar {
             background-color: #fff;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 15px 0;
         }
 
         .navbar-brand {
-            font-weight: 800;
-            font-style: italic;
-            color: #111827 !important;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .brand-icon {
-            color: var(--primary-color);
-            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0d6efd !important;
+            font-size: 1.5rem;
         }
 
         .nav-link {
-            font-weight: 600;
-            color: #6b7280 !important;
-            margin: 0 12px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
+            font-weight: 500;
+            color: #555 !important;
+            margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
         .nav-link.active,
         .nav-link:hover {
-            color: var(--primary-color) !important;
+            color: #0d6efd !important;
         }
 
-        .btn-primary-custom {
-            background-color: var(--primary-color);
-            color: white;
+        .btn-yellow {
+            background-color: #ffc107;
+            color: #333;
             font-weight: 600;
-            border-radius: 30px;
-            padding: 10px 24px;
+            border-radius: 8px;
+            padding: 8px 20px;
             border: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
             transition: all 0.3s ease;
         }
 
-        .btn-primary-custom:hover {
-            background-color: var(--primary-hover);
-            color: white;
+        .btn-yellow:hover {
+            background-color: #ffca2c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
         }
 
         /* Header / Hero Section */
@@ -267,105 +252,25 @@
 
         /* Footer */
         .footer {
-            background-color: #f9fafb;
-            padding: 60px 0 30px;
-            border-top: 1px solid #e5e7eb;
+            background-color: #0f172a;
+            color: #cbd5e1;
+            padding: 60px 0 20px;
         }
 
-        .footer-brand {
-            font-weight: 800;
-            font-style: italic;
-            color: #111827;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .footer-desc {
-            color: #6b7280;
-            font-size: 0.9rem;
+        .footer h4 {
+            color: #fff;
+            font-weight: 600;
             margin-bottom: 20px;
-            line-height: 1.6;
         }
 
-        .social-icons {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #e5e7eb;
-            color: #4b5563;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .footer a {
+            color: #cbd5e1;
             text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.9rem;
+            transition: color 0.3s ease;
         }
 
-        .social-icon:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        .footer-heading {
-            font-weight: 700;
-            color: #111827;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #6b7280;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .footer-address {
-            color: #6b7280;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-bottom {
-            margin-top: 50px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #6b7280;
-            font-size: 0.85rem;
-        }
-
-        .footer-bottom-links a {
-            color: #6b7280;
-            text-decoration: none;
-            margin-left: 20px;
+        .footer a:hover {
+            color: #fff;
         }
 
         /* Floating Actions */
@@ -408,20 +313,6 @@
         .btn-wa:hover {
             background-color: #1ebe5d;
         }
-
-        @media (max-width: 768px) {
-            .footer-bottom {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-            .footer-bottom-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
     </style>
 </head>
 
@@ -430,21 +321,16 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.htm">
-                <i class="fas fa-mountain brand-icon"></i>
-                PROVIDER OFFROAD MALANG
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                style="border: none; outline: none; box-shadow: none;">
+            <a class="navbar-brand" href="index.htm">Offroad<span class="text-warning">Malang</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.htm">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.htm#paket">Paket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.htm#layanan">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link active" href="blog.htm">Blog</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><a href="#" class="btn btn-primary-custom">Hubungi
-                            Kami</a></li>
+                    <li class="nav-item ms-lg-3"><a href="#" class="btn btn-yellow px-4">Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>
@@ -600,58 +486,35 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer mt-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-brand">
-                        <i class="fas fa-mountain brand-icon"></i>
-                        PROVIDER OFFROAD MALANG
-                    </div>
-                    <p class="footer-desc">The premier destination for offroad enthusiasts and thrill seekers in Kota
-                        Batu. Join us for the ride of a lifetime.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
+                <div class="col-md-4">
+                    <h4>Offroad<span class="text-warning">Malang</span></h4>
+                    <p>Provider Offroad dan Outbound terbaik di Malang dan Kota Batu. Solusi liburan dan team building
+                        Anda.</p>
                 </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Safety Guidelines</a></li>
-                        <li><a href="#">Equipment Rental</a></li>
-                        <li><a href="#">Tour Packages</a></li>
-                        <li><a href="#">Private Events</a></li>
+                <div class="col-md-4">
+                    <h4>Layanan</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Fun Offroad</a></li>
+                        <li class="mb-2"><a href="#">Outbound Training</a></li>
+                        <li class="mb-2"><a href="#">Rafting</a></li>
+                        <li class="mb-2"><a href="#">Paintball</a></li>
                     </ul>
                 </div>
-
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-heading">Support</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Cancellation Policy</a></li>
-                        <li><a href="#">Insurance Details</a></li>
+                <div class="col-md-4">
+                    <h4>Hubungi Kami</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Batu, Malang, Jawa Timur</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> 082211221909</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@offroadmalang.com</li>
                     </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="footer-heading">Find Us</h4>
-                    <p class="footer-address">
-                        Jl. Adventure Lane, Offroad Valley,<br>
-                        Batu, Jawa Timur, 65314
-                    </p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div>&copy; 2026 Provider Offroad Malang. All rights reserved.</div>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+            <hr class="mt-4 mb-4 border-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Provider Offroad Malang. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
